@@ -1,0 +1,425 @@
+/***************** style for sign in page ***************/
+input,
+textarea,
+button,
+select,
+a,
+div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input :focus,
+input :active {
+  background: none;
+}
+.register {
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #fff;
+}
+.sign-in-form h1,
+.sign-up-form h1 {
+  color: #444;
+  margin-bottom: 1rem;
+}
+.form-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.register-brand {
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  font-size: 3.7rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 20;
+  transition: 1.7s all;
+}
+.sign-up-mode .register-brand {
+  transition: 1.7s all;
+  right: 55%;
+}
+.sign-in-sign-up {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  transition: 1s 0.7s ease-in-out;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.sign-up-form {
+  opacity: 0;
+  z-index: 1;
+}
+.sign-in-form {
+  z-index: 2;
+}
+
+.sign-in-username,
+.sign-in-password,
+.sign-up-username,
+.sign-up-email,
+.sign-up-password {
+  background-color: rgb(228, 224, 224);
+  max-width: 380px;
+  width: 100%;
+  height: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  margin: 1rem 0;
+  border-radius: 50px;
+}
+.sign-in-username input,
+.sign-in-password input,
+.sign-up-username input,
+.sign-up-email input,
+.sign-up-password input {
+  width: 230px;
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  color: #333;
+}
+.sign-in-username i,
+.sign-in-password i,
+.sign-up-username i,
+.sign-up-email i,
+.sign-up-password i {
+  text-align: center;
+  line-height: 55px;
+}
+.sign-in-username i,
+.sign-in-username input::placeholder,
+.sign-in-password i,
+.sign-in-password input::placeholder,
+.sign-up-username i,
+.sign-up-username input::placeholder,
+.sign-up-password i,
+.sign-up-email input::placeholder,
+.sign-up-email i,
+.sign-up-password input::placeholder {
+  color: #acacac;
+  font-size: 1.49rem;
+  font-weight: bold;
+}
+.sign-in-submit,
+.sign-up-submit {
+  width: 150px;
+  height: 49px;
+  border: none;
+  outline: none;
+  border-radius: 49px;
+  cursor: pointer;
+  background: #ffa589;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.sign-in-submit:hover,
+.sign-up-submit:hover {
+  background: #ff5722;
+}
+.sign-in-social p,
+.sign-up-social p {
+  padding: 0.7rem 0;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.social-app {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.social-app i {
+  border: 1px solid #333;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1.6rem;
+  margin: 0 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.social-app i:hover {
+  border: 1px solid #ff5722;
+  color: #ff5722;
+  cursor: pointer;
+}
+.panels-container {
+  direction: ltr;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+.register:before {
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 48%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(-45deg, #ff5722 0%, #ffa589 100%);
+  transition: 1.8s ease-in-out;
+  border-radius: 50%;
+  z-index: 6;
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  text-align: center;
+  z-index: 6;
+}
+.btn.transparent {
+  margin: 0;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  width: 140px;
+  height: 45px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: center;
+  transition: 0.3s;
+}
+.btn.transparent:hover {
+  background: #fff;
+  color: #ff5722;
+}
+.panel .content {
+  color: #fff;
+  transition: all 0.9s ease-in-out;
+  transition-delay: 0.6s;
+  padding-left: 1.5rem;
+}
+.image {
+  width: 80%;
+  transition: all 1.1s ease-in-out;
+  transition-delay: 0.4s;
+  padding-left: 1.5rem;
+}
+.panel h3 {
+  color: #fff;
+  font-weight: 600;
+  line-height: 1;
+  font-size: 1.99rem;
+}
+
+.panel p {
+  font-size: 1.2rem;
+  padding: 0.7rem 0;
+  font-weight: 700;
+  word-break: break-all;
+}
+.left-panel {
+  pointer-events: all;
+  padding: 3rem 17% 2rem 12%;
+}
+.right-panel {
+  pointer-events: none;
+  padding: 3rem 12% 2rem 17%;
+}
+.sign-up-mode:before {
+  transform: translate(100%, -50%);
+  right: 52%;
+}
+.right-panel .image,
+.right-panel .content {
+  transform: translateX(800px);
+}
+.sign-up-mode .left-panel .image,
+.sign-up-mode .left-panel .content {
+  transform: translateX(-800px);
+}
+.sign-up-mode .right-panel .image,
+.sign-up-mode .right-panel .content {
+  transform: translateX(0%);
+}
+.sign-up-mode .sign-in-sign-up {
+  left: 25%;
+}
+.sign-up-mode form.sign-up-form {
+  opacity: 1;
+  z-index: 2;
+}
+.sign-up-mode form.sign-in-form {
+  opacity: 0;
+  z-index: 1;
+}
+.sign-up-mode .left-panel {
+  pointer-events: none;
+}
+.sign-up-mode .right-panel {
+  pointer-events: all;
+}
+
+@media screen and (max-width: 870px) {
+  .register-brand .logo__brand span {
+    background-color: #000;
+  }
+  .register {
+    min-height: 800px;
+    height: 100vh;
+  }
+  .register:before {
+    width: 1500px;
+    height: 1500px;
+    left: 30%;
+    bottom: 68%;
+    transform: translateX(-50%);
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+  .sign-up-mode .register-brand {
+    right: 5%;
+  }
+  .sign-in-sign-up {
+    width: 100%;
+    top: 77%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+  .sign-in-sign-up,
+  .register.sign-up-mode .sign-in-sign-up {
+    left: 50%;
+  }
+  .panels-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+  .panel {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 8%;
+    grid-column: 1 / 2;
+  }
+  .panel .content {
+    padding-right: 15%;
+    transition: 0.9s 0.8s ease-in-out;
+  }
+  .panel h3 {
+    font-size: 2.2rem;
+  }
+  .panel p {
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+  }
+  .btn.transparent {
+    width: 110px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+  .left-panel {
+    grid-row: 1 / 2;
+  }
+  .right-panel {
+    grid-row: 3 / 4;
+  }
+  .image {
+    width: 220px;
+    padding-top: 5%;
+    transition: 0.9s 0.6s ease-in-out;
+    transition-delay: 0.6s;
+  }
+  .right-panel .content,
+  .right-panel .image {
+    transform: translateY(300px);
+  }
+  .register.sign-up-mode:before {
+    transform: translate(-50%, 100%);
+    bottom: 32%;
+    right: initial;
+  }
+  .register.sign-up-mode .left-panel .image,
+  .register.sign-up-mode .left-panel .content {
+    transform: translateY(-300px);
+  }
+  .register.sign-up-mode .right-panel .image,
+  .register.sign-up-mode .right-panel .content {
+    transform: translateY(0px);
+  }
+  .register.sign-up-mode .sign-in-sign-up {
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+@media screen and (max-width: 570px) {
+  .register {
+    overflow: hidden;
+  }
+  .register-brand {
+    font-size: 1.5rem;
+    right: 2%;
+    top: 1%;
+  }
+  .register-brand .logo__brand .brand__top {
+    width: 10px;
+    height: 3px;
+  }
+  .register-brand .logo__brand .brand__bottom {
+    width: 15px;
+    height: 3px;
+  }
+  form {
+    padding: 0 1.5rem;
+  }
+  .image {
+    display: none;
+  }
+  .panel .content {
+    padding: 0.5rem 1rem;
+  }
+  .register:before {
+    bottom: 72%;
+    left: 50%;
+  }
+  .register.sign-up-mode:before {
+    bottom: 28%;
+    left: 50%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .register-brand {
+    display: none;
+  }
+}

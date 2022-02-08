@@ -1,0 +1,29 @@
+.loadbar {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  align-self: center;
+  margin: 0 auto;
+}
+.circular {
+  background: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px dotted #1d1a1ab9;
+  animation-name: borderFade;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+@keyframes borderFade {
+  100% {
+    transform: rotate(360deg);
+  }
+}
